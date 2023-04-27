@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ei1kfNNdgTEOknxQVRilk4dJ62qT+0tbKga0wwmWNtN5+EMdFWJB5xfye695vc1wIBNwQqv6+1+dCjGCbhXpSQ==",
+  "dgSpecHash": "zP6C1Z+cfgSKLEMTmH4tCwjY8gr52PnJj2iYicXGDBsVdog4qgXdRverjLH6uFwOPKPFryF/wdanvQ3OPsNp2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Long\\Desktop\\jnie\\api-infow\\api-infow\\api-infow.csproj",
+  "projectFilePath": "C:\\Users\\Long\\Desktop\\my-info\\infos\\api-infow\\api-infow\\api-infow.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Long\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Long\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Long\\Desktop\\jnie\\api-infow\\api-infow\\api-infow.csproj": {}
+    "C:\\Users\\Long\\Desktop\\my-info\\infos\\api-infow\\api-infow\\api-infow.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Long\\Desktop\\jnie\\api-infow\\api-infow\\api-infow.csproj": {
+    "C:\\Users\\Long\\Desktop\\my-info\\infos\\api-infow\\api-infow\\api-infow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Long\\Desktop\\jnie\\api-infow\\api-infow\\api-infow.csproj",
+        "projectUniqueName": "C:\\Users\\Long\\Desktop\\my-info\\infos\\api-infow\\api-infow\\api-infow.csproj",
         "projectName": "api-infow",
-        "projectPath": "C:\\Users\\Long\\Desktop\\jnie\\api-infow\\api-infow\\api-infow.csproj",
+        "projectPath": "C:\\Users\\Long\\Desktop\\my-info\\infos\\api-infow\\api-infow\\api-infow.csproj",
         "packagesPath": "C:\\Users\\Long\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Long\\Desktop\\jnie\\api-infow\\api-infow\\obj\\",
+        "outputPath": "C:\\Users\\Long\\Desktop\\my-info\\infos\\api-infow\\api-infow\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Long\\AppData\\Roaming\\NuGet\\NuGet.Config",
