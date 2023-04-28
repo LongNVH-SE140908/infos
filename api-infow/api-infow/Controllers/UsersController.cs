@@ -28,6 +28,7 @@ namespace api_infow.Controllers
         public async Task<List<UserInfo>> GetAsync() =>
         await _userCollection.Find(_ => true).ToListAsync();
         [HttpGet("GetById")]
+
         public async Task<UserInfo?> GetAsync(int id) =>
             await _userCollection.Find(x => x.UserId == id).FirstOrDefaultAsync();
         [HttpPost("CreateAsync")]
