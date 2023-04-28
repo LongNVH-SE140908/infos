@@ -25,7 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
       });
       proxyRes.on('end', function () {
         const { accessToken, expriedAt } = JSON.parse(body);
-        console.log(body);
+        console.log(JSON.parse(body));
         res.end('my response to cli');
       });
     };

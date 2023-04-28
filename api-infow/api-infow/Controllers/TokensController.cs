@@ -1,6 +1,7 @@
 ﻿using api_infow.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using MongoDB.Driver;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -14,18 +15,24 @@ namespace api_infow.Controllers
     public class TokensController : ControllerBase
     {
         public IConfiguration _configuration;
-        
+        private readonly IMongoCollection<UserInfo> _userCollection;
         public TokensController(IConfiguration config)
         {
             _configuration = config;
+            _configuration = config;
+            var mongoClient = new MongoClient(_configuration["UserStoreDatabase:ConnectionString"]);
+
+            var mongoDatabase = mongoClient.GetDatabase(_configuration["UserStoreDatabase:DatabaseName"]);
+
+            _userCollection = mongoDatabase.GetCollection<UserInfo>(_configuration["UserStoreDatabase:UsersCollectionName"]);
         }
         [HttpPost]
         public async Task<IActionResult> Post(UserInfo _userData)
         {
-            if (_userData != null && _userData.Email != null && _userData.Password != null)
+            if (_userData != null && _userData.UserName != null && _userData.Password != null)
             {
-                //var user = await GetUser(_userData.Email, _userData.Password);
-                var user = _userData;
+                var user = await _userCollection.Find(x => x.UserName == _userData.UserName && x.Password == _userData.Password).FirstOrDefaultAsync();
+                
                 if (user != null)
                 {
                     //create claims details based on the user information
