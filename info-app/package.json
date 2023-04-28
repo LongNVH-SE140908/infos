@@ -27,6 +27,8 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@types/http-proxy": "^1.17.11"
+    "@types/cookies": "^0.7.7",
+    "@types/http-proxy": "^1.17.11",
+    "cookies": "^0.8.0"
   }
 }

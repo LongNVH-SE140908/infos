@@ -1,4 +1,5 @@
 ﻿using api_infow.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
@@ -22,6 +23,7 @@ namespace api_infow.Controllers
 
             _userCollection = mongoDatabase.GetCollection<UserInfo>(_configuration["UserStoreDatabase:UsersCollectionName"]);
         }
+        [Authorize]
         [HttpGet("Get")]
         public async Task<List<UserInfo>> GetAsync() =>
         await _userCollection.Find(_ => true).ToListAsync();
