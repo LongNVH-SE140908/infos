@@ -1,20 +1,26 @@
-name: .NET Core Desktop
 
+name: Run commands on different operating systems
 on:
   push:
-    branches: [ "main" ]
-jobs:
+    branches: [ main ]
 
-  build:
+jobs:
+  Run-PSScriptAnalyzer-on-Windows:
+    name: Run on Windows
     runs-on: self-hosted
     steps:
-    - shell: pwsh
-    - run: iisreset /stop
-    - uses: actions/checkout@v3
-    - uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '7'
-    - run: dotnet build api-infow
-    - run: dotnet publish api-infow
-    - shell: pwsh
-    - run: iisreset /start 
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7'
+      - shell: pwsh
+        run: |
+          iisreset /stop
+      - name: build api info
+        shell: pwsh
+        run: |
+          dotnet build api-infow
+      - name: punlish api info
+        shell: pwsh
+        run: |
+          dotnet publish api-infow
